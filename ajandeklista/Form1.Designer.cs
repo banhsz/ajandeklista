@@ -47,10 +47,12 @@
             this.button_modositas = new System.Windows.Forms.Button();
             this.textBox_bolt_modosit = new System.Windows.Forms.TextBox();
             this.label_id_modosit = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ajandekListBox
@@ -223,11 +225,22 @@
             this.label_id_modosit.TabIndex = 7;
             this.label_id_modosit.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ajandeklista.Properties.Resources.Daco_4145831;
+            this.pictureBox1.Location = new System.Drawing.Point(140, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(318, 147);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // Ajándékok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(470, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -246,6 +259,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -270,6 +284,7 @@
         private System.Windows.Forms.Button button_modositas;
         private System.Windows.Forms.TextBox textBox_bolt_modosit;
         private System.Windows.Forms.Label label_id_modosit;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
