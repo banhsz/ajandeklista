@@ -13,11 +13,11 @@ using MySql.Data.MySqlClient;
 
 namespace ajandeklista
 {
-    public partial class Form1 : Form
+    public partial class Ajándékok : Form
     {
         MySqlConnection conn;
         List<Ajandek> ajandekok;
-        public Form1()
+        public Ajándékok()
         {
             InitializeComponent();
             conn = new MySqlConnection("server = localhost; database = ajandek; uid = root; pwd = ;");
