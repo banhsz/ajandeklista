@@ -39,9 +39,17 @@
             this.button_ajandekTorles = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label_reszletek = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox_nev_modosit = new System.Windows.Forms.TextBox();
+            this.button_modositas = new System.Windows.Forms.Button();
+            this.textBox_bolt_modosit = new System.Windows.Forms.TextBox();
+            this.label_id_modosit = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // ajandekListBox
@@ -135,7 +143,7 @@
             this.groupBox3.Controls.Add(this.label_reszletek);
             this.groupBox3.Location = new System.Drawing.Point(246, 166);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(217, 272);
+            this.groupBox3.Size = new System.Drawing.Size(217, 115);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Ajándék részletei";
@@ -148,11 +156,78 @@
             this.label_reszletek.Size = new System.Drawing.Size(0, 13);
             this.label_reszletek.TabIndex = 0;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label_id_modosit);
+            this.groupBox4.Controls.Add(this.label3);
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Controls.Add(this.textBox_nev_modosit);
+            this.groupBox4.Controls.Add(this.button_modositas);
+            this.groupBox4.Controls.Add(this.textBox_bolt_modosit);
+            this.groupBox4.Location = new System.Drawing.Point(246, 287);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(217, 151);
+            this.groupBox4.TabIndex = 8;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Ajándék szerkesztése";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 67);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Bolt:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Név:";
+            // 
+            // textBox_nev_modosit
+            // 
+            this.textBox_nev_modosit.Location = new System.Drawing.Point(6, 40);
+            this.textBox_nev_modosit.Name = "textBox_nev_modosit";
+            this.textBox_nev_modosit.Size = new System.Drawing.Size(100, 20);
+            this.textBox_nev_modosit.TabIndex = 1;
+            // 
+            // button_modositas
+            // 
+            this.button_modositas.Location = new System.Drawing.Point(6, 113);
+            this.button_modositas.Name = "button_modositas";
+            this.button_modositas.Size = new System.Drawing.Size(100, 23);
+            this.button_modositas.TabIndex = 3;
+            this.button_modositas.Text = "Módosítás";
+            this.button_modositas.UseVisualStyleBackColor = true;
+            this.button_modositas.Click += new System.EventHandler(this.button_modositas_Click);
+            // 
+            // textBox_bolt_modosit
+            // 
+            this.textBox_bolt_modosit.Location = new System.Drawing.Point(6, 83);
+            this.textBox_bolt_modosit.Name = "textBox_bolt_modosit";
+            this.textBox_bolt_modosit.Size = new System.Drawing.Size(100, 20);
+            this.textBox_bolt_modosit.TabIndex = 2;
+            // 
+            // label_id_modosit
+            // 
+            this.label_id_modosit.AutoSize = true;
+            this.label_id_modosit.Location = new System.Drawing.Point(42, 24);
+            this.label_id_modosit.Name = "label_id_modosit";
+            this.label_id_modosit.Size = new System.Drawing.Size(0, 13);
+            this.label_id_modosit.TabIndex = 7;
+            this.label_id_modosit.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -163,6 +238,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -180,6 +257,13 @@
         private System.Windows.Forms.Button button_ajandekTorles;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label_reszletek;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox_nev_modosit;
+        private System.Windows.Forms.Button button_modositas;
+        private System.Windows.Forms.TextBox textBox_bolt_modosit;
+        private System.Windows.Forms.Label label_id_modosit;
     }
 }
 

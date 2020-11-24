@@ -64,9 +64,9 @@ namespace ajandeklista
                 }
             }
         }
-        void AdatBeszuras(string nev_input,string bolt_input)
+        void AdatBeszuras(string nev_input, string bolt_input)
         {
-            if (bolt_input=="")
+            if (bolt_input == "")
             {
                 bolt_input = null;
             }
@@ -91,33 +91,65 @@ namespace ajandeklista
             comm.Parameters.AddWithValue("@id", id_input);
             comm.ExecuteNonQuery();
         }
+        void AdatModositas(int id_input,string nev_input,string bolt_input)
+        {
+            string sql = @"
+            UPDATE ajandek
+            SET
+            nev = @nev,
+            uzlet = @bolt
+            WHERE id = @id
+            ";
+            var comm = this.conn.CreateCommand();
+            comm.CommandText = sql;
+            comm.Parameters.AddWithValue("@id", id_input);
+            comm.Parameters.AddWithValue("@nev", nev_input);
+            comm.Parameters.AddWithValue("@bolt", bolt_input);
+            comm.ExecuteNonQuery();
+        }
 
 
         private void button_ajandekHozzaadas_Click(object sender, EventArgs e)
         {
-            if (textBox_nev.Text!="")
+            if (textBox_nev.Text != "")
             {
-                AdatBeszuras(textBox_nev.Text,textBox_bolt.Text);
+                AdatBeszuras(textBox_nev.Text, textBox_bolt.Text);
             }
             AdatBetoltes();
         }
         private void button_ajandekTorles_Click(object sender, EventArgs e)
         {
-            if (ajandekListBox.SelectedIndex>=0)
+            if (ajandekListBox.SelectedIndex >= 0)
             {
                 label_reszletek.Text = "";
-                int torlenoID = Convert.ToInt32(ajandekok[ajandekListBox.SelectedIndex].Id+"");
+                textBox_nev_modosit.Text = "";
+                textBox_bolt_modosit.Text = "";
+                label_id_modosit.Text = "";
+                int torlenoID = Convert.ToInt32(ajandekok[ajandekListBox.SelectedIndex].Id + "");
                 AdatTorles(torlenoID);
                 AdatBetoltes();
             }
-        }
 
+        }
         private void ajandekListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ajandekListBox.SelectedIndex>=0)
+            if (ajandekListBox.SelectedIndex >= 0)
             {
                 label_reszletek.Text = ajandekok[ajandekListBox.SelectedIndex].ToString();
+                textBox_nev_modosit.Text = ajandekok[ajandekListBox.SelectedIndex].Nev;
+                textBox_bolt_modosit.Text = ajandekok[ajandekListBox.SelectedIndex].Uzlet;
+                label_id_modosit.Text = ajandekok[ajandekListBox.SelectedIndex].Id + "";
             }
+        }
+
+        private void button_modositas_Click(object sender, EventArgs e)
+        {
+            if ((textBox_nev_modosit.Text != "") && (label_id_modosit.Text!=""))
+            {
+                AdatModositas(Convert.ToInt32(label_id_modosit.Text), textBox_nev_modosit.Text, textBox_bolt_modosit.Text);
+                label_reszletek.Text = "";
+            }
+            AdatBetoltes();
         }
     }
 }
