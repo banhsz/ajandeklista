@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ajandeklista", "ajandeklista\ajandeklista.csproj", "{9CEB4287-93E0-4015-8F3D-3112AF44B458}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CEB4287-93E0-4015-8F3D-3112AF44B458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CEB4287-93E0-4015-8F3D-3112AF44B458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CEB4287-93E0-4015-8F3D-3112AF44B458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CEB4287-93E0-4015-8F3D-3112AF44B458}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FBD4852-514E-444D-82F5-A85BA44CA098}
+	EndGlobalSection
+EndGlobal
