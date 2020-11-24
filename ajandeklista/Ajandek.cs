@@ -23,7 +23,14 @@ namespace ajandeklista
 
         public override string ToString()
         {
-            return String.Format("{0}   {1}   {2}",this.id,this.nev,this.uzlet);
+            if (this.uzlet=="")
+            {
+                return String.Format("{0}\n{1}\n{2}", this.id, this.nev,"Saját készítésű");
+            }
+            else
+            { 
+                return String.Format("{0}\n{1}\n{2}", this.id,this.nev,this.uzlet);
+            }
         }
     }
 }
