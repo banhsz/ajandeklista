@@ -37,10 +37,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button_ajandekTorles = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label_reszletek = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // ajandekListBox
@@ -50,6 +51,7 @@
             this.ajandekListBox.Name = "ajandekListBox";
             this.ajandekListBox.Size = new System.Drawing.Size(208, 212);
             this.ajandekListBox.TabIndex = 0;
+            this.ajandekListBox.SelectedIndexChanged += new System.EventHandler(this.ajandekListBox_SelectedIndexChanged);
             // 
             // textBox_nev
             // 
@@ -128,15 +130,9 @@
             this.button_ajandekTorles.UseVisualStyleBackColor = true;
             this.button_ajandekTorles.Click += new System.EventHandler(this.button_ajandekTorles_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(630, 418);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 20);
-            this.textBox1.TabIndex = 6;
-            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label_reszletek);
             this.groupBox3.Location = new System.Drawing.Point(246, 166);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(217, 272);
@@ -144,13 +140,20 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Ajándék részletei";
             // 
+            // label_reszletek
+            // 
+            this.label_reszletek.AutoSize = true;
+            this.label_reszletek.Location = new System.Drawing.Point(7, 19);
+            this.label_reszletek.Name = "label_reszletek";
+            this.label_reszletek.Size = new System.Drawing.Size(0, 13);
+            this.label_reszletek.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -158,8 +161,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -174,8 +178,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button_ajandekTorles;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label_reszletek;
     }
 }
 

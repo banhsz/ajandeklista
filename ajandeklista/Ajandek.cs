@@ -25,11 +25,11 @@ namespace ajandeklista
         {
             if (this.uzlet=="")
             {
-                return String.Format("{0}\n{1}\n{2}", this.id, this.nev,"Saját készítésű");
+                return String.Format("ID: {0}\nNév: {1}\nBolt: {2}", this.id, this.nev,"Saját készítésű");
             }
             else
             { 
-                return String.Format("{0}\n{1}\n{2}", this.id,this.nev,this.uzlet);
+                return String.Format("ID: {0}\nNév: {1}\nBolt: {2}", this.id,this.nev,this.uzlet);
             }
         }
     }

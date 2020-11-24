@@ -80,7 +80,6 @@ namespace ajandeklista
             comm.Parameters.AddWithValue("@uzlet", bolt_input);
             comm.ExecuteNonQuery();
         }
-
         void AdatTorles(int id_input)
         {
             string sql = @"
@@ -92,6 +91,8 @@ namespace ajandeklista
             comm.Parameters.AddWithValue("@id", id_input);
             comm.ExecuteNonQuery();
         }
+
+
         private void button_ajandekHozzaadas_Click(object sender, EventArgs e)
         {
             if (textBox_nev.Text!="")
@@ -100,14 +101,22 @@ namespace ajandeklista
             }
             AdatBetoltes();
         }
-
         private void button_ajandekTorles_Click(object sender, EventArgs e)
         {
             if (ajandekListBox.SelectedIndex>=0)
             {
+                label_reszletek.Text = "";
                 int torlenoID = Convert.ToInt32(ajandekok[ajandekListBox.SelectedIndex].Id+"");
                 AdatTorles(torlenoID);
                 AdatBetoltes();
+            }
+        }
+
+        private void ajandekListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ajandekListBox.SelectedIndex>=0)
+            {
+                label_reszletek.Text = ajandekok[ajandekListBox.SelectedIndex].ToString();
             }
         }
     }
