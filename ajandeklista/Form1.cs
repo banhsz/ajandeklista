@@ -31,7 +31,6 @@ namespace ajandeklista
                 }
             };
             AdatBetoltes();
-            AdatBeszuras("csoki", "");
         }
         void AdatBetoltes()
         {
@@ -78,6 +77,15 @@ namespace ajandeklista
             comm.Parameters.AddWithValue("@nev", nev_input);
             comm.Parameters.AddWithValue("@uzlet", bolt_input);
             comm.ExecuteNonQuery();
+        }
+
+        private void button_ajandekHozzaadas_Click(object sender, EventArgs e)
+        {
+            if (textBox_nev.Text!="")
+            {
+                AdatBeszuras(textBox_nev.Text,textBox_bolt.Text);
+            }
+            AdatBetoltes();
         }
     }
 }

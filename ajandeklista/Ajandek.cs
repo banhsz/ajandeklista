@@ -23,7 +23,7 @@ namespace ajandeklista
 
         public override string ToString()
         {
-            return String.Format(this.id+"\t"+this.nev+"\t"+this.uzlet);
+            return String.Format("{0}   {1}   {2}",this.id,this.nev,this.uzlet);
         }
     }
 }
